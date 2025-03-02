@@ -28,7 +28,7 @@ services:
       labels:
         # Traefik configurações básicas
         - "traefik.enable=true"
-        - "traefik.http.routers.vendas-dahorta.rule=Host(`vendasdahorta.com`)"
+        - "traefik.http.routers.vendas-dahorta.rule=Host(`vendasdahorta.com`) || Host(`www.vendasdahorta.com`)"
         - "traefik.http.routers.vendas-dahorta.entrypoints=websecure"
         - "traefik.http.routers.vendas-dahorta.tls.certresolver=letsencryptresolver"
         - "traefik.http.services.vendas-dahorta.loadbalancer.server.port=80"
