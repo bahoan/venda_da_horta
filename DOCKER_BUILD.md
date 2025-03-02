@@ -55,7 +55,7 @@ npm install @supabase/supabase-js
 
 2. **Build da imagem**
    ```bash
-   docker build -t arturdiboa/vendas-dahorta:v1.2 .
+   docker build -t arturdiboa/vendas-dahorta:v1.3 .
    ```
 
 3. **Push para DockerHub**
@@ -64,7 +64,7 @@ npm install @supabase/supabase-js
    docker login
 
    # Push da imagem
-   docker push arturdiboa/vendas-dahorta:v1.2
+   docker push arturdiboa/vendas-dahorta:v1.3
    ```
 
 ## Deploy com Docker Swarm/Portainer
@@ -76,7 +76,7 @@ npm install @supabase/supabase-js
 
 2. Usar o arquivo `stack.yml` para deploy com as seguintes configurações importantes:
    ```yaml
-   image: docker.io/arturdiboa/vendas-dahorta:v1.2  # Caminho completo da imagem
+   image: docker.io/arturdiboa/vendas-dahorta:v1.3  # Caminho completo da imagem
    environment:
      - VITE_SUPABASE_URL=https://cynnujihthpzbfxlfayy.supabase.co
      - VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN5bm51amlodGhwemJmeGxmYXl5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTg5OTU4NjgsImV4cCI6MjAzNDU3MTg2OH0.ZUTO3SepkwQsuL85KGwKi8-erpGIy20bYMbiD4voGaA
@@ -251,7 +251,7 @@ services:
 
 ## Notas Importantes
 
-- Sempre use o caminho completo da imagem: `docker.io/arturdiboa/vendas-dahorta:v1.2`
+- Sempre use o caminho completo da imagem: `docker.io/arturdiboa/vendas-dahorta:v1.3`
 - A porta 80 deve estar consistente em todos os arquivos de configuração
 - O usuário nginx deve ter permissões corretas nos diretórios relevantes
 - As otimizações de performance e privacidade estão configuradas para seguir as melhores práticas atuais do Chrome
@@ -369,6 +369,11 @@ A aplicação agora suporta a personalização do favicon através de uma variá
    - Certifique-se de que o arquivo está acessível publicamente se for uma URL externa
 
 ## Histórico de Versões
+
+### v1.3 (02/03/2025)
+- Adicionado suporte para múltiplos domínios (vendasdahorta.com e www.vendasdahorta.com)
+- Configuração do Traefik atualizada para rotear ambos os domínios
+- Otimizações de performance e segurança
 
 ### v1.2 (01/03/2025)
 - Atualizada a versão da imagem Docker para v1.2
