@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   landing-page:
-    image: docker.io/arturdiboa/vendas-dahorta:v1.1.9
+    image: docker.io/arturdiboa/vendas-dahorta:v1.2
     ports:
       - "3000:80"
     restart: unless-stopped
@@ -11,4 +11,3 @@ services:
       - VITE_SUPABASE_URL=<sua url>
       - VITE_SUPABASE_ANON_KEY=<sua url>
       - VITE_FAVICON_URL=<sua url>
-
