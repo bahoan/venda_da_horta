@@ -24,7 +24,7 @@ export default function Hero() {
           
           <div className="max-w-4xl mx-auto text-center mb-6 md:mb-8">
             <h1 className="text-2xl sm:text-3xl md:text-3xl font-bold mb-3 md:mb-4 leading-tight">
-              <span className="block">_Qualquer pessoa com acesso à internet</span>
+              <span className="block">(verso temporia 1) Qualquer pessoa com acesso à internet</span>
               <span className="text-brand-green">pode vender hortaliças e produtos da roça</span>
               <span className="block">pelo celular</span>
             </h1>
